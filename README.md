@@ -25,3 +25,5 @@ An example of what is sent for viewing the status of a gift:
 { "token":"none", "tokenView":"6f319o4v5psiv2kvp60t9jkd397i9b9knp0gira0futrvq61u8tl2sv9h9ub2lo4gi3gsa0aeufsir04rqo1rv6eiv23mqdpf66h4s1f2ddgussbsrjecgorj0rpv8aaiheqtg6kqsg1siiuervqubcnh5g656fc","recipient":"ARDOR-L84D-3YV4-TASR-GJHHK", "giftAmount":"150000000","giftType":"2","tokenType":"view"}
 
 To redeem you would just fill in `token` with the valid redeem token
+
+Example interface: https://ardor.tools/gift/
