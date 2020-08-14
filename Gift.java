@@ -109,7 +109,7 @@ public class Gift extends AbstractContract {
             return context.generateErrorResponse(10001, "No amount sent or invalid amount");
         }
         int giftType = params.getInt("giftType");
-        if (giftType < 1 || giftType > 5) {
+        if (giftType < 1 || giftType > 6) {
             return context.generateErrorResponse(10001, "No type sent or invalid type");
         }
         String tokenType = params.getString("tokenType");
@@ -185,6 +185,12 @@ public class Gift extends AbstractContract {
                 JO setAccountTokenReturn = context.createTransaction(setAccountToken); //Set the account property on the contract account to mark that view token as redeemed
 
                 //context.logInfoMessage(String.format("INFO: token address: %s | contract address: %s", setAccountTokenReturn, giftAddress));
+
+                if (giftType == 2) {
+                    giftAmount = giftAmount - 24000000; // Subtract 0.24 IGNIS to cover other fees.  This should not be hardcoded though and rather check the current fee rates
+                } else {
+                    giftAmount = giftAmount - 24000000; // Need proper numbers for BitSwift, MPG, and GPS chains
+                }
 
                 SendMoneyCall sendMoneyCall = SendMoneyCall.create(giftType).
                         recipient(recipient).
