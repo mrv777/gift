@@ -31,7 +31,7 @@
       <form id="giftCodeForm" method="GET" action="https://testnode7.ardor.tools/nxt">
         <div class="form-group">
           <label for="tokenView">View Code</label>
-          <input type="text" class="form-control" name="tokenView" id="tokenView" aria-describedby="tokenViewHelp">
+          <textarea class="form-control" id="tokenView" name="tokenView" rows="3" aria-describedby="tokenViewHelp"></textarea>
           <small id="tokenViewHelp" class="form-text text-muted">The view only code for the gift</small>
         </div>
         <div class="form-group">
@@ -46,8 +46,8 @@
         </div>
         <div class="form-group redeemTokenYes">
           <label for="token">Redeem Code</label>
-          <input type="text" class="form-control" name="token" id="token" aria-describedby="tokenViewHelp" value="none">
-          <small id="tokenViewHelp" class="form-text text-muted">The redeem code for the gift</small>
+          <textarea class="form-control" id="token" name="token" rows="3" aria-describedby="tokenHelp">none</textarea>
+          <small id="tokenHelp" class="form-text text-muted">The redeem code for the gift</small>
         </div>
         <div class="form-group redeemTokenYes">
           <label for="recipient">Redemption Account</label>
@@ -63,13 +63,17 @@
         <div class="form-group">
           <label for="giftAmount">Amount of the gift</label>
           <input type="number" class="form-control" name="giftAmount" id="giftAmount" aria-describedby="giftAmountHelp" value="0">
-          <small id="giftAmountHelp" class="form-text text-muted">Amount the gift is for</small>
+          <small id="giftAmountHelp" class="form-text text-muted">Amount the gift should be for to verify</small>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
       <div id="server-results"></div>
   	</div>
-
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <span class="text-muted">&copy; <a href="https://squirrelsystems.net">Squirrel Systems LLC</a> | <a href="https://github.com/mrv777/gift">GitHub</a></span>
+      </div>
+    </footer>
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"

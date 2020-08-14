@@ -1,18 +1,3 @@
-/*
- * Copyright © 2016-2019 Jelurida IP B.V.
- *
- * See the LICENSE.txt file at the top-level directory of this distribution
- * for licensing information.
- *
- * Unless otherwise agreed in a custom licensing agreement with Jelurida B.V.,
- * no part of this software, including this file, may be copied, modified,
- * propagated, or distributed except according to the terms contained in the
- * LICENSE.txt file.
- *
- * Removal or modification of this copyright notice is prohibited.
- *
- */
-
 package com.jelurida.ardor.contracts;
 
 import nxt.addons.*;
@@ -37,13 +22,6 @@ import java.util.List;
 
 import static nxt.blockchain.TransactionTypeEnum.*;
 
-/**
- * Sample contract which receives amount from the trigger transaction and returns a random amount between 0 and twice the received amount.
- * Warning:
- * This design is inappropriate for gambling applications. The reason is that users can trigger this contract using a phased
- * transaction and later not approve the trigger and response transactions in case they do not like the results.
- * For a better approach to gambling application see the AllForOnePayment sample contract.
- */
 public class Gift extends AbstractContract {
 
     @ContractParametersProvider
