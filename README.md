@@ -36,3 +36,6 @@ To redeem you would just fill in `token` with the valid redeem token
 Below is an example interface that sets up the API request for the user  
 
 **Example interface:** [Ardor Gifts](https://ardor.tools/gift/)
+
+### Issues
+Currently the contract account will lose money for sending the Arbitrary Message tx and Set Account Property tx, so these should be deducted from the gift
